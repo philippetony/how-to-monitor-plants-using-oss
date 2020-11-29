@@ -1,0 +1,22 @@
+.colors__zenika,
+.colors__zenika .colorVar__main,
+.presenta .colors__zenika.colorVar__main {
+    --colorBack: #000;
+    --colorFore: #ccc;
+    --colorAccent: #b21e3e;
+    --colorAlt: #fff;
+}
+.colors__zenika .colorVar__sec,
+.presenta .colors__zenika.colorVar__sec {
+    --colorBack: #000;
+    --colorFore: #aaa;
+    --colorAccent: #b51432;
+    --colorAlt: #fff;
+}
+.colors__zenika .colorVar__alt,
+.presenta .colors__zenika.colorVar__alt {
+    --colorBack: #b51432;
+    --colorFore: #ccc;
+    --colorAccent: #fff;
+    --colorAlt: #000;
+}
