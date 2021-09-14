@@ -1,0 +1,6 @@
+[submodule "qrcodejs"]
+	path = qrcodejs
+	url = https://github.com/davidshimjs/qrcodejs.git
+[submodule "reveal.js-elapsed-time-bar"]
+	path = reveal.js-elapsed-time-bar
+	url = https://github.com/tkrkt/reveal.js-elapsed-time-bar.git

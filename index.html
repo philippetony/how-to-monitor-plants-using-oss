@@ -1,42 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRESENTA Lib</title>
-    <link rel="stylesheet" type="text/css" href="libs/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="zenika.css">
-    <script src="libs/presenta.min.js"></script>
-    <script src="libs/presenta-module-highlightjs.min.js"></script>
-    <script src="libs/presenta-block-youtube.min.js"></script>
-    <script src="libs/presenta-controller-markdown.min.js"></script>
-    <script src="libs/presenta-controller-console-notes.min.js"></script>
-    <script src="libs/presenta-controller-swiper.min.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=2.0, user-scalable=yes">
 
-        html,
-        body,
-        #app {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            padding: 0;
-            margin: 0;
-            background-color: black;
-        }
-    </style>
+	<title>When Green meets IT : Can you monitor your plants with Open-source software ?</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="zenika-theme.css" id="theme">
+	<link rel="stylesheet" href="node_modules/tailwindcss/dist/tailwind.min.css" />
+	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	<script src="qrcodejs/qrcode.min.js"></script>
 </head>
 
 <body>
-    <div id="app"></div>
-    <script src="config.js"></script>
-    <script>
-        new Presenta('#app', config)
-    </script>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate="">
+				<div class="min-h-full min-w-full flex">
+					<div style="background-color: #b51431; height: 648px; width: 100%;"
+						class="p-12 flex flex-col justify-center">
+						<h1 style="font-size: 160%;"><small>When Green meets IT</small><br />Can you monitor your plants
+							🌻 with Open-source software ?
+						</h1>
+					</div>
+					<div class="p-12 flex flex-col items-center justify-center" style="min-width: 340px;">
+						<img src="znk.png" class=" w-32 h-32" />
+						<p>TechnoZaure<br />🐘 Nantes<br />2021</p>
+					</div>
+				</div>
+				<aside class="notes">
+					Bonjour :)
+				</aside>
+			</section>
+			<section>Slide 1</section>
+			<section>Slide 2</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="reveal.js-elapsed-time-bar/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			allottedTime: 20 * 60 * 1000, // 20 minutes
+			barColor: 'rgb(181, 20, 49)',
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			,
+			keyboard: {
+				// pause/resume time when Enter is pressed
+				13: () => {
+					ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause();
+				},
+				// reset timer when 'r' is pressed
+				82: () => {
+					ElapsedTimeBar.reset();
+				}
+			}
+		});
+	</script>
 </body>
 
 </html>
