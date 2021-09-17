@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="zenika-theme.css" id="theme">
 	<link rel="stylesheet" href="node_modules/tailwindcss/dist/tailwind.min.css" />
 	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+	<script type="module" src="node_modules/@google/model-viewer/dist/model-viewer.min.js">
+	</script>
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -21,7 +23,7 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-auto-animate="">
+			<section data-auto-animate>
 				<div class="min-h-full min-w-full flex">
 					<div style="background-color: #b51431; height: 648px; width: 100%;"
 						class="p-12 flex flex-col justify-center">
@@ -38,8 +40,286 @@
 					Bonjour :)
 				</aside>
 			</section>
-			<section>Slide 1</section>
-			<section>Slide 2</section>
+			<section data-auto-animate>Myself</section>
+			<section data-auto-animate>My Bonsai Tree</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h2>The Idea</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>The Idea</h2>
+					<ul>
+						<li class="fragment">When to water it ?</li>
+						<li class="fragment">Does it get enough light ?</li>
+						<li class="fragment">Does it get too much water ?</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>Early monitoring tries</h2>
+					Basic Humidity sensor<br />
+					<span class="fragment">beeps when soil is too dry </span><br />
+					<span class="fragment">(or at night when feeling lonely 😅)</span>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h2>The Hardware</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>The Hardware</h2>
+					<div style="display:flex; justify-content: center;">
+						<model-viewer style="min-height:500px; min-width:500px;" src="miflora.glb" loading="lazy" ar
+							ar-modes="webxt scene-viewer quick-look" interaction-prompt="none"
+							environment-image="neutral" auto-rotate camera-controls rotation-per-second="0.6rad">
+
+						</model-viewer>
+						<div>
+							<ul>
+								<li class="fragment">Mi flora (Xiaomi)</li>
+								<li class="fragment">15 - 25 €</li>
+								<li class="fragment">Battery operated (CR2032)</li>
+								<li class="fragment">Bluetooth connectivity</li>
+								<li class="fragment">4 captors :<br />
+									<ul>
+										<li class="fragment">
+											Light
+										</li>
+										<li class="fragment">
+											Temperature
+										</li>
+										<li class="fragment">
+											Moisture
+										</li>
+										<li class="fragment">
+											Fertility / conductivity
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>The Provided app</h3>
+					<ul>
+						<li class="fragment" style="list-style: square; margin-bottom:.5em;">Flower care</li>
+						<li class="fragment">Available Android / iPhone</li>
+						<li class="fragment">Connects periodically to device to fetch data (including history)</li>
+						<li class="fragment">Provides a database of plants with their given needs</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<ul>
+						<li>No security</li>
+						<li>Read-only device</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre data-id="hcitool"><code class="language-console" data-trim >
+						$ 
+					  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre data-id="hcitool"><code  class="language-console" data-trim>
+						$ sudo hcitool lescan
+					  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre data-id="hcitool"><code data-trim class="language-console">
+$ sudo hcitool lescan
+LE Scan...
+4E:AD:9C:2D:20:2D (unknown)
+C4:7C:8D:6C:3C:00 (unknown)
+C4:7C:8D:6C:3C:00 Flower care
+C4:7C:8D:6C:52:F5 (unknown)
+C4:7C:8D:6C:52:F5 Flower care
+C4:7C:8D:6C:35:66 (unknown)
+C4:7C:8D:6C:35:66 Flower care
+C4:7C:8D:6C:13:BA (unknown)
+C4:7C:8D:6C:13:BA Flower care
+56:96:F9:36:68:DD (unknown)
+51:85:D8:D4:AB:7B (unknown)
+51:85:D8:D4:AB:7B (unknown)
+					  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<img src="barnybug-miflora.png" />
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+
+					<pre data-id="hcitool"><code data-trim class="language-console">
+$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
+					  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre data-id="hcitool"><code data-trim class="language-console">
+$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
+Reading miflora...
+Firmware: {Version:3.2.4 Battery:44}
+Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
+					  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre><code data-trim class="language-go" data-line-numbers="3|12,14|16,18">
+func main() {
+	if len(os.Args) != 3 {
+			fmt.Println("Usage: miflora MAC HCI_DEVICE\n\neg: miflora C4:7C:8D:XX:XX:XX hci0")
+			os.Exit(1)
+	}
+
+	mac := os.Args[1]
+	adapter := os.Args[2]
+	fmt.Println("Reading miflora...")
+	dev := miflora.NewMiflora(mac, adapter)
+
+	firmware, err := dev.ReadFirmware()
+	checkError(err)
+	fmt.Printf("Firmware: %+v\n", firmware)
+
+	sensors, err := dev.ReadSensors()
+	checkError(err)
+	fmt.Printf("Sensors: %+v\n", sensors)
+}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre><code data-trim class="language-go" data-line-numbers="1|2|7,8">
+func (m *Miflora) ReadFirmware() (Firmware, error) {
+	data, err := gattCharRead(m.mac, "0x38", m.adapter)
+	if err != nil {
+			return Firmware{}, err
+	}
+	f := Firmware{
+			Version: string(data[2:]),
+			Battery: data[0],
+	}
+	m.firmware = f
+	return f, nil
+}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre><code data-trim class="language-go" data-line-numbers="1|2|2,4|10|10,14">
+func (m *Miflora) ReadSensors() (Sensors, error) {
+	if m.firmware.Version >= "2.6.6" {
+			// newer firmwares explicitly need realtime reading enabling
+			err := m.enableRealtimeDataReading()
+			if err != nil {
+					return Sensors{}, err
+			}
+	}
+
+	data, err := gattCharRead(m.mac, "0x35", m.adapter)
+	if err != nil {
+			return Sensors{}, err
+	}
+	return decodeSensors(data), nil
+}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre><code data-trim class="language-go" data-line-numbers="1|7|7,8,3|7,9|7,10,5|7,11|7,12-13,4,5|15-19">
+func decodeSensors(data []byte) Sensors {
+	p := bytes.NewBuffer(data)
+	var t int16
+	var m uint8
+	var l, c uint16
+
+	// TT TT ?? LL LL ?? ?? MM CC CC
+	binary.Read(p, binary.LittleEndian, &t)
+	p.Next(1)
+	binary.Read(p, binary.LittleEndian, &l)
+	p.Next(2)
+	binary.Read(p, binary.LittleEndian, &m)
+	binary.Read(p, binary.LittleEndian, &c)
+
+	return Sensors{
+			Temperature:  float64(t) / 10,
+			Moisture:     m,
+			Light:        l,
+			Conductivity: c,
+	}
+}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<pre data-id="hcitool"><code data-trim class="language-console">
+$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
+Reading miflora...
+Firmware: {Version:3.2.4 Battery:44}
+Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
+					  </code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Sending it to MQTT</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Sending it to MQTT</h3>
+					<img src="thomdietrich-mi-flora-mqtt-daemon.png" />
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Grabbing it from MQTT</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Domotic integration</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Grabbing, Historizing, Plotting</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Monotoring from remote</h3>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h1>The Future</h1>
+					<ul>
+						<li>Self-watering</li>
+						<li>Automatizing shades</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 	</div>
 

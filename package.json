@@ -98,5 +98,8 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
+  },
+  "dependencies": {
+    "@google/model-viewer": "^1.8.0"
   }
 }
