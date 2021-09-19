@@ -12,8 +12,6 @@
 	<link rel="stylesheet" href="zenika-theme.css" id="theme">
 	<link rel="stylesheet" href="node_modules/tailwindcss/dist/tailwind.min.css" />
 	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
-	<script type="module" src="node_modules/@google/model-viewer/dist/model-viewer.min.js">
-	</script>
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -96,18 +94,27 @@
 					</ul>
 				</section>
 				<section data-auto-animate>
-					<h2>Early monitoring tries</h2>
-					Basic Humidity sensor<br />
-					<span class="fragment">beeps when soil is too dry </span><br />
-					<span class="fragment">(or at night when feeling lonely 😅)</span>
+					<h2>The Idea</h2>
+					<h3>Early monitoring tries</h3>
+					<div class="flex">
+						<div class="flex flex-column">
+							<img class="flex-auto" style="max-height: 30vh;" src="IMG_20210919_165110_Bokeh.jpg" />
+						</div>
+						<div>
+							<p class="fragment">Basic Humidity sensor</p><br />
+
+							<p class="fragment">Beeps when soil is too dry </p>
+							<p class="fragment">(or at night when feeling lonely 😅)</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
-					<h2>The Hardware</h2>
+					<h2>The Hardware part</h2>
 				</section>
 				<section data-auto-animate>
-					<h2>The Hardware</h2>
+					<h2>The Hardware part</h2>
 					<div style="display:flex; justify-content: center;">
 						<model-viewer style="min-height:500px; min-width:500px;" src="miflora.glb" loading="lazy" ar
 							ar-modes="webxt scene-viewer quick-look" interaction-prompt="none"
@@ -140,13 +147,16 @@
 						</div>
 					</div>
 				</section>
+				<section data-auto-animate>
+					<h2>The Hardware part</h2>
+				</section>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
-					<h2>The Software</h2>
+					<h2>The Software part</h2>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
+					<h2>The Software part</h2>
 					<h3>The Provided app</h3>
 					<ul>
 						<li class="fragment" style="list-style: square; margin-bottom:.5em;">Flower care</li>
@@ -156,234 +166,570 @@
 					</ul>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
-					<h3>Reading the data</h3>
-					<ul>
-						<li>No security</li>
-						<li>Read-only device</li>
-					</ul>
+					<h2>The Software part</h2>
+					<h3>The Provided app</h3>
+					<div class="flex flex-row justify-center items-center">
+						<img style="max-width: 25vw;" src="Screenshot_20210919-164416.jpg" />
+					</div>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
+					<h2>The Software part</h2>
+					<h3>The Provided app</h3>
+					<div class="flex flex-row justify-center items-center">
+						<img style="max-width: 25vw;" src="Screenshot_20210919-164416.jpg" />
+						&nbsp;
+						<img style="max-height: 40vh;" src="Screenshot_20210919-164639.jpg" />
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software part</h2>
+					<h3>The Provided app</h3>
+					<div class="flex flex-row justify-center items-center">
+						<img style="max-width: 25vw;" src="Screenshot_20210919-164416.jpg" />
+						&nbsp;
+						<img style="max-height: 40vh;" src="Screenshot_20210919-164639.jpg" />
+						&nbsp;
+						<img style="max-height: 40vh;" src="Screenshot_20210919-164731.jpg" />
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h2>The software part</h2>
+					<h3>The Open-Source way</h3>
+				</section>
+				<section data-auto-animate>
+					<h3>The Open-Source way</h3>
 					<h3>Reading the data</h3>
 					<img src="barnybug-miflora.png" />
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
 						$ 
-					  </code></pre>
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
 						$ go/bin/miflora
-					  </code></pre>
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
-$ go/bin/miflora
-Usage: miflora MAC HCI_DEVICE
-
-eg: miflora C4:7C:8D:XX:XX:XX hci0
-					  </code></pre>
+						$ go/bin/miflora
+						Usage: miflora MAC HCI_DEVICE
+						
+						eg: miflora C4:7C:8D:XX:XX:XX hci0
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
 						$ 
-					  </code></pre>
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code  class="language-console" data-trim>
 						$ sudo hcitool lescan
-					  </code></pre>
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code data-trim class="language-console">
-$ sudo hcitool lescan
-LE Scan...
-4E:AD:9C:2D:20:2D (unknown)
-C4:7C:8D:6C:3C:00 (unknown)
-C4:7C:8D:6C:3C:00 Flower care
-C4:7C:8D:6C:52:F5 (unknown)
-C4:7C:8D:6C:52:F5 Flower care
-C4:7C:8D:6C:35:66 (unknown)
-C4:7C:8D:6C:35:66 Flower care
-C4:7C:8D:6C:13:BA (unknown)
-C4:7C:8D:6C:13:BA Flower care
-56:96:F9:36:68:DD (unknown)
-51:85:D8:D4:AB:7B (unknown)
-51:85:D8:D4:AB:7B (unknown)
-					  </code></pre>
+						$ sudo hcitool lescan
+						LE Scan...
+						4E:AD:9C:2D:20:2D (unknown)
+						C4:7C:8D:6C:3C:00 (unknown)
+						C4:7C:8D:6C:3C:00 Flower care
+						C4:7C:8D:6C:52:F5 (unknown)
+						C4:7C:8D:6C:52:F5 Flower care
+						C4:7C:8D:6C:35:66 (unknown)
+						C4:7C:8D:6C:35:66 Flower care
+						C4:7C:8D:6C:13:BA (unknown)
+						C4:7C:8D:6C:13:BA Flower care
+						56:96:F9:36:68:DD (unknown)
+						51:85:D8:D4:AB:7B (unknown)
+						51:85:D8:D4:AB:7B (unknown)
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 
 					<pre data-id="hcitool"><code data-trim class="language-console">
-$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
-					  </code></pre>
+						$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code data-trim class="language-console">
-$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
-Reading miflora...
-Firmware: {Version:3.2.4 Battery:44}
-Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
-					  </code></pre>
+						$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
+						Reading miflora...
+						Firmware: {Version:3.2.4 Battery:44}
+						Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre><code data-trim class="language-go" data-line-numbers="3|12,14|16,18">
-func main() {
-	if len(os.Args) != 3 {
-			fmt.Println("Usage: miflora MAC HCI_DEVICE\n\neg: miflora C4:7C:8D:XX:XX:XX hci0")
-			os.Exit(1)
-	}
-
-	mac := os.Args[1]
-	adapter := os.Args[2]
-	fmt.Println("Reading miflora...")
-	dev := miflora.NewMiflora(mac, adapter)
-
-	firmware, err := dev.ReadFirmware()
-	checkError(err)
-	fmt.Printf("Firmware: %+v\n", firmware)
-
-	sensors, err := dev.ReadSensors()
-	checkError(err)
-	fmt.Printf("Sensors: %+v\n", sensors)
-}
+						func main() {
+							if len(os.Args) != 3 {
+								fmt.Println("Usage: miflora MAC HCI_DEVICE\n\neg: miflora C4:7C:8D:XX:XX:XX hci0")
+								os.Exit(1)
+							}
+							
+							mac := os.Args[1]
+							adapter := os.Args[2]
+							fmt.Println("Reading miflora...")
+							dev := miflora.NewMiflora(mac, adapter)
+							
+							firmware, err := dev.ReadFirmware()
+							checkError(err)
+							fmt.Printf("Firmware: %+v\n", firmware)
+							
+							sensors, err := dev.ReadSensors()
+							checkError(err)
+							fmt.Printf("Sensors: %+v\n", sensors)
+						}
 					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre><code data-trim class="language-go" data-line-numbers="1|2|7,8">
-func (m *Miflora) ReadFirmware() (Firmware, error) {
-	data, err := gattCharRead(m.mac, "0x38", m.adapter)
-	if err != nil {
-			return Firmware{}, err
-	}
-	f := Firmware{
-			Version: string(data[2:]),
-			Battery: data[0],
-	}
-	m.firmware = f
-	return f, nil
-}
+						func (m *Miflora) ReadFirmware() (Firmware, error) {
+							data, err := gattCharRead(m.mac, "0x38", m.adapter)
+							if err != nil {
+								return Firmware{}, err
+							}
+							f := Firmware{
+								Version: string(data[2:]),
+								Battery: data[0],
+							}
+							m.firmware = f
+							return f, nil
+						}
 					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre><code data-trim class="language-go" data-line-numbers="1|2|2,4|10|10,14">
-func (m *Miflora) ReadSensors() (Sensors, error) {
-	if m.firmware.Version >= "2.6.6" {
-			// newer firmwares explicitly need realtime reading enabling
-			err := m.enableRealtimeDataReading()
-			if err != nil {
-					return Sensors{}, err
-			}
-	}
-
-	data, err := gattCharRead(m.mac, "0x35", m.adapter)
-	if err != nil {
-			return Sensors{}, err
-	}
-	return decodeSensors(data), nil
-}
+						func (m *Miflora) ReadSensors() (Sensors, error) {
+							if m.firmware.Version >= "2.6.6" {
+								// newer firmwares explicitly need realtime reading enabling
+								err := m.enableRealtimeDataReading()
+								if err != nil {
+									return Sensors{}, err
+								}
+							}
+							
+							data, err := gattCharRead(m.mac, "0x35", m.adapter)
+							if err != nil {
+								return Sensors{}, err
+							}
+							return decodeSensors(data), nil
+						}
 					</code></pre>
 				</section>
 
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre><code data-trim class="language-go" data-line-numbers="1|7|7,8,3|7,9|7,10,5|7,11|7,12-13,4,5|15-19">
-func decodeSensors(data []byte) Sensors {
-	p := bytes.NewBuffer(data)
-	var t int16
-	var m uint8
-	var l, c uint16
-
-	// TT TT ?? LL LL ?? ?? MM CC CC
-	binary.Read(p, binary.LittleEndian, &t)
-	p.Next(1)
-	binary.Read(p, binary.LittleEndian, &l)
-	p.Next(2)
-	binary.Read(p, binary.LittleEndian, &m)
-	binary.Read(p, binary.LittleEndian, &c)
-
-	return Sensors{
-			Temperature:  float64(t) / 10,
-			Moisture:     m,
-			Light:        l,
-			Conductivity: c,
-	}
-}
+						func decodeSensors(data []byte) Sensors {
+							p := bytes.NewBuffer(data)
+							var t int16
+							var m uint8
+							var l, c uint16
+							
+							// TT TT ?? LL LL ?? ?? MM CC CC
+							binary.Read(p, binary.LittleEndian, &t)
+							p.Next(1)
+							binary.Read(p, binary.LittleEndian, &l)
+							p.Next(2)
+							binary.Read(p, binary.LittleEndian, &m)
+							binary.Read(p, binary.LittleEndian, &c)
+							
+							return Sensors{
+								Temperature:  float64(t) / 10,
+								Moisture:     m,
+								Light:        l,
+								Conductivity: c,
+							}
+						}
 					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code data-trim class="language-console">
-$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
-Reading miflora...
-Firmware: {Version:3.2.4 Battery:44}
-Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
-					  </code></pre>
+						$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
+						Reading miflora...
+						Firmware: {Version:3.2.4 Battery:44}
+						Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
+					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
+					<h3>Reading the data</h3>
+					<ul>
+						<li class="fragment">No security</li>
+						<li class="fragment">Read-only device</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h3>Reading the data</h3>
+				</section>
+				<section data-auto-animate class="diagram-slide">
+					<h3>Reading the data</h3>
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center">
+						</div>
+						<div class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111'}}}%%
+							graph LR
+							MiFlora .-> Linux
+							MiFlora(["Mi Flora"])
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Reading the data</h3>
+					<div class="mermaid flex justify-center">
+						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+						'background': '#111'}}}%%
+						graph LR
+						MiFlora .-> Linux .->|?| OpenHAB
+						MiFlora(["Mi Flora"])
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Reading the data</h3>
+					<div class="mermaid flex justify-center">
+						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+						'background': '#111', 'tertiaryColor': '#333'}}}%%
+						graph LR
+						MiFlora .-> Linux .->|?| OpenHAB
+						MiFlora(["Mi Flora"])
+						subgraph Raspberry PI
+						Linux
+						OpenHAB
+						end
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Reading the data</h3>
+					<div class="mermaid flex justify-center">
+						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+						'background': '#111', 'tertiaryColor': '#333'}}}%%
+						graph LR
+						MiFlora .-> Linux --> MQTT --> OpenHAB
+						MiFlora(["Mi Flora"])
+						subgraph Raspberry PI
+						Linux
+						OpenHAB
+						MQTT[/MQTT/]
+						end
+					</div>
+				</section>
+				<section data-auto-animate>
 					<h3>Reading the data</h3>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
-					<h3>Sending it to MQTT</h3>
+					<h3>Sending the metrics to MQTT</h3>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
-					<h3>Sending it to MQTT</h3>
+					<h3>Sending the metrics to MQTT</h3>
 					<img src="thomdietrich-mi-flora-mqtt-daemon.png" />
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
-					<h3>Grabbing it from MQTT</h3>
+					<h3>Sending the metrics to MQTT</h3>
+					<pre class="stretch" style="font-size: 40%;"><code data-trim data-line-numbers="*|6|7-8|9-10|11-12|*">
+						# The operation mode of the program. Determines wether retrieved sensor data is published via MQTT 
+						# or stdout/file.
+						#
+						# Currently supported:
+						#
+						#           mqtt-json - Publish to an MQTT broker in a proprietary json format (Default)
+#          mqtt-homie - Publish to an MQTT broker following the Homie MQTT convention
+#                       (https://github.com/marvinroger/homie)
+#      mqtt-smarthome - Publish to an MQTT broker following the mqtt-smarthome proposal
+#                       (https://github.com/mqtt-smarthome/mqtt-smarthome)
+#  homeassistant-mqtt - Publish to an MQTT broker following the HomeAssistant discovery format
+#                       (https://www.home-assistant.io/docs/mqtt/discovery/)
+#         gladys-mqtt - Publish to an MQTT broker following the Gladys MQTT proposal
+#                       https://gladysassistant.com/docs/integrations/mqtt/
+#    thingsboard-json - Publish to the ThingsBoard MQTT broker
+#                       (https://thingsboard.io)
+#     wirenboard-mqtt - Publish to the Wiren Board MQTT broker
+#                       (https://wirenboard.com)
+#                json - Print to stdout as json encoded strings
+#
+					</code></pre>
+					<aside class="notes">
+						Json in proprietary format.
+						Many formats for domotic systems.
+					</aside>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
-					<h3>Domotic integration</h3>
+					<h3>Sending the metrics to MQTT</h3>
+					<ul>
+						<li class="fragment">Multiple data formats</li>
+						<li class="fragment">Involves multiple topics</li>
+					</ul>
+					<p class="fragment">→ Which format to choose ?</p>
 				</section>
 				<section data-auto-animate>
-					<h2>The Software</h2>
-					<h3>Grabbing, Historizing, Plotting</h3>
+					<h3>Sending the metrics to MQTT</h3>
+					<p>→ Which format to choose ?</p>
+					<div class="fragment mermaid flex justify-center">
+						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+						'background': '#111'}}}%%
+						graph LR
+						MiFlora .-> Daemon --> MQTT --> OpenHAB
+						MiFlora(["Mi Flora"])
+						MQTT[/"MQTT"/]
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<p>→ Which format to choose ?</p>
+					<img src="openhab_mqtt_bindings.png" />
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<div class="flex justify-center">
+						<img src="homie-example.png" style="max-height: 40vh" />
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<div class="flex justify-center">
+						<img src="homie-example.png" style="max-height: 40vh" />
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ 
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
+						3.0
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
+						3.0
+						$ 
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
+						3.0
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$name'
+						Tomate1
+						$ 
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
+						3.0
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$name'
+						Tomate1
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$nodes'
+						sensor
+						$
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ 
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+						$ 
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
+						battery,conductivity,light,moisture,temperature
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
+						battery,conductivity,light,moisture,temperature
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/temperature'
+						19.3
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
+						battery,conductivity,light,moisture,temperature
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/temperature'
+						19.3
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/conductivity'
+						591
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+					<h4>Homie MQTT Convention</h4>
+					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
+						miflora
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
+						battery,conductivity,light,moisture,temperature
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/temperature'
+						19.3
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/conductivity'
+						591
+						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/moisture'
+						63
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Sending the metrics to MQTT</h3>
+				</section>
+				<section data-auto-animate>
+					<h3>Viewing the metrics in OpenHAB</h3>
+				</section>
+				<section data-auto-animate>
+					<h3>Viewing the metrics in OpenHAB</h3>
+					<img src="openhab_general.png" />
+				</section>
+				<section data-auto-animate>
+					<h3>Viewing the metrics in OpenHAB</h3>
+					<img src="openhab_detail.png" />
+				</section>
+				<section data-auto-animate>
+					<h3>Viewing the metrics in OpenHAB</h3>
+					<div class="flex justify-center">
+						<img src="openhab_history.png" style="max-height: 50vh;" />
+					</div>
 				</section>
 				<section data-auto-animate>
 					<h2>The Software</h2>
 					<h3>Monotoring from remote</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>The Software</h2>
+					<h3>Monotoring from remote</h3>
+					<div class="fragment mermaid flex justify-center">
+						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+						'background': '#111'}}}%%
+						graph LR
+						MiFlora .-> Daemon --> MQTT --> OpenHAB
+						MiFlora(["Mi Flora"])
+						MQTT[/"MQTT"/]
+						Device -->|SSH/Internet| OpenHAB </div>
 				</section>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h1>The Future</h1>
 					<ul>
-						<li>Self-watering</li>
-						<li>Automatizing shades</li>
+						<li class="fragment">Self-watering</li>
+						<li class="fragment">Automatizing shades</li>
 					</ul>
 				</section>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h1>Questions ?</h1>
+				</section>
+			</section>
+			<section>
+				<h2 style="text-transform: none;">Thank you for listening</h2>
+				<div style="display:flex; flex-direction: row; align-content: space-between; align-items: center;">
+					<div
+						style="display:flex; flex-direction: column; align-content: flex-start; align-items: center; flex:1;">
+						<img style="border-radius: 50%; vertical-align: middle; margin:0 1em;" src="philippe.png" />
+						<p>Philippe TONY</p>
+						<p class="text-2xl"><i class="fab fa-github"></i>philippetony</p>
+						<p class="text-2xl">Developer &amp; more <br />@ Zenika Nantes</p>
+					</div>
+					<div style="display:flex; flex-direction: column; align-items: center; flex:1; font-size: 50%;">
+
+						<!-- <div style="border-bottom: 3px solid #333; align-self: stretch; margin: 1em;"></div> -->
+						<p>
+							Slides :
+						</p>
+						<div class="bg-white" style="flex:auto; padding: 0.3em;">
+							<span id="qrcode" class="no-border"></span>
+						</div>
+						<p style="font-size: 80%;">https://github.com/philippetony/how-to-monitor-plants-using-oss</p>
+						<script>
+							new QRCode(document.getElementById("qrcode"), {
+								colorLight: '#fff',
+								colorDark: '#191919',
+								height: 128,
+								width: 128,
+								text: "https://github.com/philippetony/how-to-monitor-plants-using-oss"
+							});
+						</script>
+					</div>
+				</div>
 			</section>
 		</div>
 	</div>
@@ -393,6 +739,10 @@ Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="reveal.js-elapsed-time-bar/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+	<script type="module" src="node_modules/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
+	<script type="module" src="node_modules/mermaid/dist/mermaid.min.js"></script>
+
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -416,6 +766,8 @@ Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
 				}
 			}
 		});
+
+		mermaid.initialize({ theme: 'dark' });
 	</script>
 </body>
 

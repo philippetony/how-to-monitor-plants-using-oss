@@ -100,6 +100,7 @@
     }
   },
   "dependencies": {
-    "@google/model-viewer": "^1.8.0"
+    "@google/model-viewer": "^1.8.0",
+    "mermaid": "^8.12.1"
   }
 }

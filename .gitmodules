@@ -4,3 +4,6 @@
 [submodule "reveal.js-elapsed-time-bar"]
 	path = reveal.js-elapsed-time-bar
 	url = https://github.com/tkrkt/reveal.js-elapsed-time-bar.git
+[submodule "reveal.js-mermaid-plugin"]
+	path = reveal.js-mermaid-plugin
+	url = https://github.com/ludwick/reveal.js-mermaid-plugin.git
