@@ -16,13 +16,12 @@
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	<script src="qrcodejs/qrcode.min.js"></script>
-	<script type="module" src="node_modules/mermaid/dist/mermaid.min.js"></script>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-auto-animate>
+			<section data-auto-animate id="title">
 				<div class="min-h-full min-w-full flex">
 					<div style="background-color: #b51431; height: 648px; width: 100%;"
 						class="p-8 flex flex-col justify-center">
@@ -39,7 +38,7 @@
 					Bonjour :)
 				</aside>
 			</section>
-			<section data-auto-animate>
+			<section data-auto-animate id="title-speaker">
 				<div class="min-h-full min-w-full flex">
 					<div style="background-color: #b51431; height: 648px; width: 100%;"
 						class="p-8 flex flex-col justify-center">
@@ -51,11 +50,12 @@
 						<img style="border-radius: 50%; vertical-align: middle; margin:0 1em;" src="philippe.png" />
 						<p>Philippe TONY</p>
 						<p class="text-2xl"><i class="fab fa-github"></i>philippetony</p>
-						<p class="text-2xl">Developer &amp; more <br />@ Zenika Nantes</p>
+						<p data-i18n="function" class="text-2xl">Developer &amp; more <br />@ Zenika Nantes</p>
 					</div>
 				</div>
+				<aside class="notes"></aside>
 			</section>
-			<section data-auto-animate>
+			<section data-auto-animate id="team">
 				<div class="min-h-full min-w-full flex">
 					<div class="p-8 flex flex-col items-center justify-center fragment" style="min-width: 340px;">
 						<img style="border-radius: 50%; vertical-align: middle; margin:0 1em;" src="lil.jpg" />
@@ -76,25 +76,32 @@
 						<p class="text-2xl">Developer &amp; more <br />@ Zenika Nantes</p>
 					</div>
 				</div>
+				<aside class="notes">Bonsai dans l'équipe depuis 2009.
+					Tomates sont les stagiaires de l'annnée.
+				</aside>
 			</section>
 			<section data-auto-animate>
-				<section data-auto-animate>
-					<h2>The Idea</h2>
+				<section data-auto-animate id="a1">
+					<h2 data-i18n="idea">The Idea</h2>
+					<aside class="notes"></aside>
 				</section>
-				<section data-auto-animate>
-					<h2>The Idea</h2>
-					<h3>Plant 🌻</h3>
+				<section data-auto-animate id="a2">
+					<h2 data-i18n="idea">The Idea</h2>
+					<h3 data-i18n="plant">Plant 🌻</h3>
+					<aside class="notes"></aside>
 				</section>
-				<section data-auto-animate>
-					<h2>The Idea</h2>
-					<h3>Plant 🌻</h3>
+				<section data-auto-animate id="a3">
+					<h2 data-i18n="idea">The Idea</h2>
+					<h3 data-i18n="plant">Plant 🌻</h3>
 					<ul>
 						<li>When to water it ?</li>
-						<li class="fragment">Does it get enough light ?</li>
 						<li class="fragment">Does it get too much water ?</li>
+						<li class="fragment">Does it get enough light ?</li>
 					</ul>
+					<aside class="notes">Pas facile avec un bonsai, qui boit peu l'hiver, et qui apprécie plus un peu de
+						sécheresse que trop d'eau.</aside>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate id="a4">
 					<h2>The Idea</h2>
 					<h3>Early monitoring tries</h3>
 					<div class="flex">
@@ -108,11 +115,15 @@
 							<p class="fragment">(or at night when feeling lonely 😅)</p>
 						</div>
 					</div>
+					<aside class="notes">Le capteur indique l'humidité avec un écran cristaux liquide, 4 valeurs, et bip
+						quand trop sec</aside>
 				</section>
+				<aside class="notes"></aside>
 			</section>
 			<section data-auto-animate>
-				<section data-auto-animate>
+				<section data-auto-animate id="b1">
 					<h2>The Hardware part</h2>
+					<aside class="notes">Le nouveau matériel</aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Hardware part</h2>
@@ -147,14 +158,18 @@
 							</ul>
 						</div>
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Hardware part</h2>
+					<aside class="notes"></aside>
 				</section>
+				<aside class="notes"></aside>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h2>The Software part</h2>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Software part</h2>
@@ -165,6 +180,7 @@
 						<li class="fragment">Connects periodically to device to fetch data (including history)</li>
 						<li class="fragment">Provides a database of plants with their given needs</li>
 					</ul>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Software part</h2>
@@ -172,6 +188,7 @@
 					<div class="flex flex-row justify-center items-center">
 						<img style="max-width: 25vw;" src="Screenshot_20210919-164416.jpg" />
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Software part</h2>
@@ -181,6 +198,7 @@
 						&nbsp;
 						<img style="max-height: 40vh;" src="Screenshot_20210919-164639.jpg" />
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Software part</h2>
@@ -192,27 +210,32 @@
 						&nbsp;
 						<img style="max-height: 40vh;" src="Screenshot_20210919-164731.jpg" />
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The software part</h2>
 					<h3>The Open-Source way</h3>
+					<aside class="notes">Hacking du device</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>The Open-Source way</h3>
 					<h3>Reading the data</h3>
 					<img src="barnybug-miflora.png" />
+					<aside class="notes">Plein de projets => Bon signe. </aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
 						$ 
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
 						$ go/bin/miflora
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -222,18 +245,22 @@
 						
 						eg: miflora C4:7C:8D:XX:XX:XX hci0
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code class="language-console" data-trim >
 						$ 
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
 					<pre data-id="hcitool"><code  class="language-console" data-trim>
 						$ sudo hcitool lescan
 					</code></pre>
+					<aside class="notes">Le LEScan pour les device low energy. En scan on ne voit pas les miflora
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -253,6 +280,8 @@
 						51:85:D8:D4:AB:7B (unknown)
 						51:85:D8:D4:AB:7B (unknown)
 					</code></pre>
+					<aside class="notes">Ne pas activer tous d'un coup sinon on ne sait pas facilement lequel est lequel
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -260,6 +289,7 @@
 					<pre data-id="hcitool"><code data-trim class="language-console">
 						$ go/bin/miflora C4:7C:8D:6C:3C:00 hci0
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -269,10 +299,11 @@
 						Firmware: {Version:3.2.4 Battery:44}
 						Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
-					<pre><code data-trim class="language-go" data-line-numbers="3|12,14|16,18">
+					<pre><code data-trim class="language-go" data-line-numbers="*|12,14|16,18">
 						func main() {
 							if len(os.Args) != 3 {
 								fmt.Println("Usage: miflora MAC HCI_DEVICE\n\neg: miflora C4:7C:8D:XX:XX:XX hci0")
@@ -293,6 +324,7 @@
 							fmt.Printf("Sensors: %+v\n", sensors)
 						}
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -310,6 +342,7 @@
 							return f, nil
 						}
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -330,6 +363,7 @@
 							return decodeSensors(data), nil
 						}
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 
 				<section data-auto-animate>
@@ -357,6 +391,7 @@
 							}
 						}
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -366,6 +401,8 @@
 						Firmware: {Version:3.2.4 Battery:44}
 						Sensors: {Temperature:20.6 Moisture:46 Light:139 Conductivity:585}
 					</code></pre>
+					<aside class="notes">Il manque l'historique, mais peu utilisé dans les projet open source. Peu
+						documenté.</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
@@ -373,9 +410,11 @@
 						<li class="fragment">No security</li>
 						<li class="fragment">Read-only device</li>
 					</ul>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
+					<aside class="notes"></aside>
 				</section>
 				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
@@ -391,6 +430,7 @@
 							MiFlora(["Mi Flora"])
 						</span>
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
@@ -406,6 +446,7 @@
 							MiFlora(["Mi Flora"])
 						</span>
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
@@ -425,6 +466,7 @@
 							end
 						</span>
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
@@ -445,16 +487,22 @@
 							end
 						</span>
 					</div>
+					<aside class="notes">MQTT / Choix du Mosquitto</aside>
 				</section>
 				<section data-transition="none" data-auto-animate>
 					<h3>Reading the data</h3>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
 					<img src="thomdietrich-mi-flora-mqtt-daemon.png" />
+					<aside class="notes">Plusieurs projets tenté. Le premier envoi un json basique dans un topic.
+						Celui a plein de possibilité de configuration.
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -483,7 +531,9 @@
 					<aside class="notes">
 						Json in proprietary format.
 						Many formats for domotic systems.
+						Besoin de normaliser les informations de façon à faciliter l'intégration.
 					</aside>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -492,6 +542,7 @@
 						<li class="fragment">Mainly domotic systems (+few cloud-based services)</li>
 					</ul>
 					<p class="fragment">→ Which format to choose ?</p>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate class="diagram-slide">
 					<h3>Sending the metrics to MQTT</h3>
@@ -509,11 +560,13 @@
 							MQTT[/"MQTT"/]
 						</span>
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
 					<p>→ Which format to choose ?</p>
 					<img src="openhab_mqtt_bindings.png" />
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -521,6 +574,8 @@
 					<div class="flex justify-center">
 						<img src="homie-example.png" style="max-height: 40vh" />
 					</div>
+					<aside class="notes">Page d'accueil du projet home. L'exemple parle de lui même. On visualise des
+						topics. Se parcours comme une arborescence. Introspection intégrée.</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -528,6 +583,7 @@
 					<div class="flex justify-center">
 						<img src="homie-example.png" style="max-height: 40vh" />
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -535,6 +591,8 @@
 					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
 						$ 
 					</code></pre>
+					<aside class="notes">Une fois le démon configuré et lancé. Ici on prends l'exemple des tomates
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -542,6 +600,7 @@
 					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -550,6 +609,7 @@
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/$homie'
 						3.0
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -559,6 +619,7 @@
 						3.0
 						$ 
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -570,6 +631,7 @@
 						Tomate1
 						$ 
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -583,6 +645,7 @@
 						sensor
 						$
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -590,6 +653,7 @@
 					<pre data-id="hcitool"><code class="language-console" style="font-size: 80%;" data-trim >
 						$ 
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -598,6 +662,7 @@
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$name'
 						miflora
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -607,6 +672,7 @@
 						miflora
 						$ 
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -616,6 +682,7 @@
 						miflora
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -626,6 +693,7 @@
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/$properties'
 						battery,conductivity,light,moisture,temperature
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -638,6 +706,8 @@
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/temperature'
 						19.3
 					</code></pre>
+					<aside class="notes">On écoute un topic. On récupère une valeur immédiatement, mais on récupère les
+						donnes en temps réel. Toutes les 15 minutes l'info redescend.</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -652,6 +722,7 @@
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/conductivity'
 						591
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
@@ -668,30 +739,40 @@
 						$ mosquitto_sub -u openhabian -h localhost -t 'homie/tomate1/sensor/moisture'
 						63
 					</code></pre>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Viewing the metrics in OpenHAB</h3>
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Viewing the metrics in OpenHAB</h3>
 					<img src="openhab_general.png" />
+					<aside class="notes">OpenHab détecte automatiquement les devices. Le matériel est détecté tout seul
+						à partir du moment où on active la connexion au broker MQTT.
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Viewing the metrics in OpenHAB</h3>
 					<img src="openhab_detail.png" />
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Viewing the metrics in OpenHAB</h3>
 					<div class="flex justify-center">
 						<img src="openhab_history.png" style="max-height: 50vh;" />
 					</div>
+					<aside class="notes">Les sources de données ont un zoom par défaut, au jour, à la smeaine, au mois.
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h2>The Software</h2>
 					<h3>Monotoring from remote</h3>
+					<aside class="notes"></aside>
 				</section>
 				<section data-transition="none-out" data-auto-animate class="diagram-slide">
 					<h2>The Software</h2>
@@ -711,6 +792,7 @@
 							Device("Phone / Computer")
 						</span>
 					</div>
+					<aside class="notes"></aside>
 				</section>
 				<section data-transition="none-in" class="diagram-slide">
 					<h2>The Software</h2>
@@ -730,21 +812,30 @@
 							Device("Phone / Computer")
 						</span>
 					</div>
+					<aside class="notes"></aside>
 				</section>
+				<aside class="notes"></aside>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h3>Placement of captors</h3>
 					<img src="tomates.jpg" />
+					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Placement of captors</h3>
 					<img src="captor_position.jpg" />
+					<aside class="notes">Au centre de chaque jardiniere. Les feuilles peuvent masquer le capteur.
+						Il faut arriver à toruver un comprims au niveau de la position du capteur.
+					</aside>
 				</section>
 				<section data-auto-animate>
 					<h3>Captor accuracy</h3>
 					<img src="openhab_detail.png" />
+					<aside class="notes">Etalonnage. Durée de la batterie environ 1an. La mesure de la batterie peut
+						remonter parfois.</aside>
 				</section>
+				<aside class="notes"></aside>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
@@ -753,12 +844,16 @@
 						<li class="fragment">Self-watering</li>
 						<li class="fragment">Automatizing shades</li>
 					</ul>
+					<aside class="notes"></aside>
 				</section>
+				<aside class="notes"></aside>
 			</section>
 			<section data-auto-animate>
 				<section data-auto-animate>
 					<h1>Questions ?</h1>
+					<aside class="notes"></aside>
 				</section>
+				<aside class="notes"></aside>
 			</section>
 			<section>
 				<h2 style="text-transform: none;">Thank you for listening</h2>
@@ -792,6 +887,7 @@
 						</script>
 					</div>
 				</div>
+				<aside class="notes"></aside>
 			</section>
 		</div>
 	</div>
@@ -801,7 +897,10 @@
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="reveal.js-elapsed-time-bar/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+	<script src="node_modules/reveal.js-internation/plugin/internation/internation.js"></script>
 	<script type="module" src="node_modules/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="node_modules/mermaid/dist/mermaid.min.js"></script>
+	<script src="reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
 
 	<script>
 		// More info about initialization & config:
@@ -814,7 +913,7 @@
 			barColor: 'rgb(225, 20, 49)',
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, Internation]
 			,
 			keyboard: {
 				// pause/resume time when Enter is pressed
@@ -825,13 +924,22 @@
 				82: () => {
 					ElapsedTimeBar.reset();
 				}
-			}
+			},
+			internation: {
+				locale: "en",
+				localename: 'English',
+				langattribute: "data-i18n",
+				switchselector: ".langchooser",
+				html: true,
+				languages: {},
+				debug: false,
+				makejson: true
+			},
 		});
 
 		mermaid.initialize({ theme: 'dark' });
 	</script>
 
-	<script src="reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
 
 </body>
 

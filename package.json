@@ -101,6 +101,7 @@
   },
   "dependencies": {
     "@google/model-viewer": "^1.8.0",
-    "mermaid": "^8.12.1"
+    "mermaid": "^8.12.1",
+    "reveal.js-internation": "^1.0.4"
   }
 }
