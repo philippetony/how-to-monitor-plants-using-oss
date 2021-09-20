@@ -459,12 +459,12 @@
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
 					<pre class="stretch" style="font-size: 40%;"><code data-trim data-line-numbers="*|6|7-8|9-10|11-12|*">
-						# The operation mode of the program. Determines wether retrieved sensor data is published via MQTT 
-						# or stdout/file.
-						#
-						# Currently supported:
-						#
-						#           mqtt-json - Publish to an MQTT broker in a proprietary json format (Default)
+# The operation mode of the program. Determines wether retrieved sensor data is published via MQTT 
+# or stdout/file.
+#
+# Currently supported:
+#
+#           mqtt-json - Publish to an MQTT broker in a proprietary json format (Default)
 #          mqtt-homie - Publish to an MQTT broker following the Homie MQTT convention
 #                       (https://github.com/marvinroger/homie)
 #      mqtt-smarthome - Publish to an MQTT broker following the mqtt-smarthome proposal
@@ -488,8 +488,8 @@
 				<section data-auto-animate>
 					<h3>Sending the metrics to MQTT</h3>
 					<ul>
-						<li class="fragment">Multiple data formats</li>
-						<li class="fragment">Involves multiple topics</li>
+						<li class="fragment">Multiple sending conventions</li>
+						<li class="fragment">Mainly domotic systems (+few cloud-based services)</li>
 					</ul>
 					<p class="fragment">→ Which format to choose ?</p>
 				</section>
@@ -693,7 +693,7 @@
 					<h2>The Software</h2>
 					<h3>Monotoring from remote</h3>
 				</section>
-				<section data-auto-animate class="diagram-slide">
+				<section data-transition="none-out" data-auto-animate class="diagram-slide">
 					<h2>The Software</h2>
 					<h3>Monotoring from remote</h3>
 					<!-- Diagram will be displayed in this DIV -->
@@ -708,8 +708,42 @@
 							MiFlora(["Mi Flora"])
 							MQTT[/"MQTT"/]
 							Device -->|SSH/Internet| OpenHAB
+							Device("Phone / Computer")
 						</span>
 					</div>
+				</section>
+				<section data-transition="none-in" class="diagram-slide">
+					<h2>The Software</h2>
+					<h3>Monotoring from the beach 🏖️☀️</h3>
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
+						</div>
+						<span class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111'}}}%%
+							graph LR
+							MiFlora .-> Daemon --> MQTT --> OpenHAB
+							MiFlora(["Mi Flora"])
+							MQTT[/"MQTT"/]
+							Device -->|SSH/Internet| OpenHAB
+							Device("Phone / Computer")
+						</span>
+					</div>
+				</section>
+			</section>
+			<section data-auto-animate>
+				<section data-auto-animate>
+					<h3>Placement of captors</h3>
+					<img src="tomates.jpg" />
+				</section>
+				<section data-auto-animate>
+					<h3>Placement of captors</h3>
+					<img src="captor_position.jpg" />
+				</section>
+				<section data-auto-animate>
+					<h3>Captor accuracy</h3>
+					<img src="openhab_detail.png" />
 				</section>
 			</section>
 			<section data-auto-animate>
@@ -745,7 +779,8 @@
 						<div class="bg-white" style="flex:auto; padding: 0.3em;">
 							<span id="qrcode" class="no-border"></span>
 						</div>
-						<p style="font-size: 80%;">https://github.com/philippetony/how-to-monitor-plants-using-oss</p>
+						<p style="font-size: 80%;">https://github.com/philippetony/how-to-monitor-plants-using-oss
+						</p>
 						<script>
 							new QRCode(document.getElementById("qrcode"), {
 								colorLight: '#fff',
@@ -775,7 +810,8 @@
 		Reveal.initialize({
 			hash: true,
 			allottedTime: 20 * 60 * 1000, // 20 minutes
-			barColor: 'rgb(181, 20, 49)',
+			//barColor: 'rgb(181, 20, 49)',
+			barColor: 'rgb(225, 20, 49)',
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
