@@ -16,6 +16,7 @@
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	<script src="qrcodejs/qrcode.min.js"></script>
+	<script type="module" src="node_modules/mermaid/dist/mermaid.min.js"></script>
 </head>
 
 <body>
@@ -376,61 +377,76 @@
 				<section data-auto-animate>
 					<h3>Reading the data</h3>
 				</section>
-				<section data-auto-animate class="diagram-slide">
+				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
 					<!-- Diagram will be displayed in this DIV -->
 					<div class="flex">
-						<div class="diagram-display flex-auto flex items-center justify-center">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
 						</div>
-						<div class="diagram-data hidden">
+						<span class="diagram-data hidden">
 							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
 							'background': '#111'}}}%%
 							graph LR
 							MiFlora .-> Linux
 							MiFlora(["Mi Flora"])
+						</span>
+					</div>
+				</section>
+				<section data-transition="none" class="diagram-slide">
+					<h3>Reading the data</h3>
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
 						</div>
+						<span class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111'}}}%%
+							graph LR
+							MiFlora .-> Linux .->|?| OpenHAB
+							MiFlora(["Mi Flora"])
+						</span>
 					</div>
 				</section>
-				<section data-auto-animate>
+				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
-					<div class="mermaid flex justify-center">
-						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
-						'background': '#111'}}}%%
-						graph LR
-						MiFlora .-> Linux .->|?| OpenHAB
-						MiFlora(["Mi Flora"])
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
+						</div>
+						<span class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111', 'tertiaryColor': '#333'}}}%%
+							graph LR
+							MiFlora .-> Linux .->|?| OpenHAB
+							MiFlora(["Mi Flora"])
+							subgraph Raspberry PI
+							Linux
+							OpenHAB
+							end
+						</span>
 					</div>
 				</section>
-				<section data-auto-animate>
+				<section data-transition="none" class="diagram-slide">
 					<h3>Reading the data</h3>
-					<div class="mermaid flex justify-center">
-						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
-						'background': '#111', 'tertiaryColor': '#333'}}}%%
-						graph LR
-						MiFlora .-> Linux .->|?| OpenHAB
-						MiFlora(["Mi Flora"])
-						subgraph Raspberry PI
-						Linux
-						OpenHAB
-						end
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
+						</div>
+						<span class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111', 'tertiaryColor': '#333'}}}%%
+							graph LR
+							MiFlora .-> Linux --> MQTT --> OpenHAB
+							MiFlora(["Mi Flora"])
+							subgraph Raspberry PI
+							Linux
+							OpenHAB
+							MQTT[/MQTT/]
+							end
+						</span>
 					</div>
 				</section>
-				<section data-auto-animate>
-					<h3>Reading the data</h3>
-					<div class="mermaid flex justify-center">
-						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
-						'background': '#111', 'tertiaryColor': '#333'}}}%%
-						graph LR
-						MiFlora .-> Linux --> MQTT --> OpenHAB
-						MiFlora(["Mi Flora"])
-						subgraph Raspberry PI
-						Linux
-						OpenHAB
-						MQTT[/MQTT/]
-						end
-					</div>
-				</section>
-				<section data-auto-animate>
+				<section data-transition="none" data-auto-animate>
 					<h3>Reading the data</h3>
 				</section>
 				<section data-auto-animate>
@@ -477,16 +493,21 @@
 					</ul>
 					<p class="fragment">→ Which format to choose ?</p>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate class="diagram-slide">
 					<h3>Sending the metrics to MQTT</h3>
 					<p>→ Which format to choose ?</p>
-					<div class="fragment mermaid flex justify-center">
-						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
-						'background': '#111'}}}%%
-						graph LR
-						MiFlora .-> Daemon --> MQTT --> OpenHAB
-						MiFlora(["Mi Flora"])
-						MQTT[/"MQTT"/]
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
+						</div>
+						<span class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111'}}}%%
+							graph LR
+							MiFlora .-> Daemon --> MQTT --> OpenHAB
+							MiFlora(["Mi Flora"])
+							MQTT[/"MQTT"/]
+						</span>
 					</div>
 				</section>
 				<section data-auto-animate>
@@ -672,17 +693,23 @@
 					<h2>The Software</h2>
 					<h3>Monotoring from remote</h3>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate class="diagram-slide">
 					<h2>The Software</h2>
 					<h3>Monotoring from remote</h3>
-					<div class="fragment mermaid flex justify-center">
-						%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
-						'background': '#111'}}}%%
-						graph LR
-						MiFlora .-> Daemon --> MQTT --> OpenHAB
-						MiFlora(["Mi Flora"])
-						MQTT[/"MQTT"/]
-						Device -->|SSH/Internet| OpenHAB </div>
+					<!-- Diagram will be displayed in this DIV -->
+					<div class="flex">
+						<div class="diagram-display flex-auto flex items-center justify-center" data-markdown>
+						</div>
+						<span class="diagram-data hidden">
+							%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#b51431', 'darkMode': true,
+							'background': '#111'}}}%%
+							graph LR
+							MiFlora .-> Daemon --> MQTT --> OpenHAB
+							MiFlora(["Mi Flora"])
+							MQTT[/"MQTT"/]
+							Device -->|SSH/Internet| OpenHAB
+						</span>
+					</div>
 				</section>
 			</section>
 			<section data-auto-animate>
@@ -740,8 +767,6 @@
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="reveal.js-elapsed-time-bar/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
 	<script type="module" src="node_modules/@google/model-viewer/dist/model-viewer.min.js"></script>
-	<script src="reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
-	<script type="module" src="node_modules/mermaid/dist/mermaid.min.js"></script>
 
 	<script>
 		// More info about initialization & config:
@@ -769,6 +794,9 @@
 
 		mermaid.initialize({ theme: 'dark' });
 	</script>
+
+	<script src="reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
+
 </body>
 
 </html>
